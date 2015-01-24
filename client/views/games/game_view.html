@@ -1,0 +1,120 @@
+<template name="gameView">
+	<div class="game-view">
+		<header class="game-header clearfix">
+			<div class="wrapper">
+				<div class="game-admin margins-off">
+					<h3 class="game-name">{{name}}</h3>
+					{{#if ended}}
+						<p class="white">This Game Has Ended</p>
+					{{else}}
+						{{#if creator}}
+							<button class="btn red-btn end-game-btn">End Game</button>			
+						{{else}}
+							<button class="btn red-btn leave-game-btn">Leave Game</button>
+						{{/if}}
+					{{/if}}
+				</div>
+
+				<div class="player-list">
+					{{#each players}}
+						<div class="player-info {{#if cardCzar}}current-czar{{/if}} {{#if winner ..}}{{winner ..}}-winner{{/if}} margins-off">
+
+
+							<span class="player-name">
+								{{playerName ..}}
+
+								{{#if hasSelected ..}}
+									<span class="asterik">*</span>
+								{{/if}}
+							</span>
+							<span class="player-score">{{score}}</span>
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</header>
+
+
+		<div class="czar-notificaton pull-left">
+			{{#if ended}}
+				<h3 class="green-bg white t-a-center pad-1">This game has ended.</h3>
+			{{else}}
+				{{#if roundOver}}
+					{{#if judgmentFinished}}
+						<h3 class="green-bg white t-a-center pad-1">Round Over. A new round will start in {{clock}} seconds.</h3>
+					{{else}}
+						{{#if cardCzar}}
+							<h3 class="red-bg white t-a-center pad-1">Czar, select a {{currentPlace}} gif.</h3>
+						{{else}}
+							<h3 class="green-bg white t-a-center pad-1">The Czar is judging.</h3>
+						{{/if}}
+					{{/if}}
+				{{else}}
+					{{#if cardCzar}}
+						<h3 class="red-bg white t-a-center pad-1">You are Czar.</h3>
+					{{else}}
+						{{#if started}}
+							<h3 class="red-bg white t-a-center pad-1">You have {{clock}} seconds to make a selection.</h3> 
+						{{/if}}
+					{{/if}}
+				{{/if}}
+			{{/if}}
+		</div>
+
+		<section class="game-board t-a-center">
+			{{#if ended}}
+				<h3>This game has ended.</h3>
+			{{else}}
+				{{#if started}}				
+					<div class="game-prompt">
+						<h3>{{gamePrompt}}</h3>
+					</div>
+
+					{{#if roundOver}}
+						{{> playerSubmissions}}
+					{{/if}}
+				{{else}}
+					{{#if startable}}
+						{{#if cardCzar}}
+							<button class="btn red-btn start-game-btn">Start Game</button>
+						{{else}}
+							<h3>Waiting for the Czar to start the game.</h3>
+						{{/if}}
+					{{else}}
+						<h3>Waiting for more players to start.</h3>
+					{{/if}}
+				{{/if}}
+			{{/if}}
+		</section>
+
+		{{#if cardCzar}}
+			
+		{{else}}
+			{{#if started}}
+			<section class="player-hand">
+				{{#each gifInHand}}
+					{{>playerCard}}
+				{{/each}}
+			</section>
+			{{/if}}
+		{{/if}}
+	</div>
+</template>
+
+<template name="playerCard">
+	<div class="player-card">
+		<img class="player-gif" src="{{gifSource}}"/>
+		<p class="card-score">{{score}}</p>
+	</div>
+</template>
+
+
+<template name="playerSubmissions">
+	<div class="game-submissions">
+		{{#each submissions}}
+			<div class="submitted-card {{winningGif ..}}">
+				<img class="player-gif" src="{{card}}"/>
+			</div>
+		{{/each}}
+	</div>
+</template>

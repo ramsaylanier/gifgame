@@ -1,0 +1,16 @@
+.errors{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	bottom: 55px;
+	left: 0;
+	color: white;
+
+	.error{
+		background-color: $red;
+	}
+
+	.success{
+		background-color: $green;
+	}
+}

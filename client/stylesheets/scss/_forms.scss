@@ -1,0 +1,60 @@
+.login-form-wrapper{
+	background-color: fade-out(white, .1);
+	padding: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include translate3d(-50%, -50%);
+	@include transition(all 300ms ease-out 300ms);
+
+	&.off-page{
+		@include translate3d(-50%, -30%);
+		opacity: 0.0;
+	}
+}
+
+.form-control{
+	margin-top: 1rem;
+	@include transition(all 300ms ease-out);
+
+	&.inline{
+		margin-right: 1.5rem;
+		display: inline-block;
+
+	}
+
+	&.off-page{
+		opacity: 0.0;
+	}
+}
+
+.field{
+	padding: .5rem;
+	font-size: 1rem;
+	border: none;
+	background-color: white;
+	margin-top: 0rem;
+
+	&.dark-field{
+		background-color: fade-out(black, .5);
+		color: white;
+		@include input-placeholder{
+			color: white;
+		}
+	}
+}
+
+.new-game-form{
+	position: absolute;
+	background-color: $green;
+	width: 100%;
+	height: 100px;
+	top: -100px;
+
+}
+
+
+.register-link{
+	color: $red;
+}
+

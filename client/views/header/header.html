@@ -1,0 +1,14 @@
+<template name="header">
+	<header class="header">
+		<div class="wrapper">
+			<nav class="app-nav">
+				{{#if notInGame}}
+					<a class="btn green-btn create-game-link" href="#">Create Game</a>
+				{{/if}}
+				<ul class="nav-links">
+					<li><a class="account-link nav-link" href="#">{{currentUser.username}} <span class="arrow">&#9652;</span> </a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+</template>

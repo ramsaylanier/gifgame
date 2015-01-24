@@ -1,0 +1,36 @@
+<template name="login">
+	<div class="hero">
+		<div class="login-form-wrapper form-wrapper off-page">
+			<form name="{{#if registerPage}}register-form{{else}}login-form{{/if}}" class="{{#if registerPage}}register-form{{else}}login-form{{/if}}">
+
+				{{#if registerPage}}
+					<div class="form-control off-page">
+						<input type="email" name="email" class="login-field field" placeholder="email">
+					</div>
+				{{/if}}
+
+				<div class="form-control">
+					<input type="text" name="username" class="login-field field" placeholder="username">
+				</div>
+
+				<div class="form-control">
+					<input type="password" name="password" class="login-field field" placeholder="password">
+				</div>
+
+				{{#if registerPage}}
+					<div class="form-control off-page">
+						<input type="password" name="password-confirm" class="login-field field" placeholder="verify password">
+					</div>
+				{{/if}}
+
+
+				{{#if registerPage}}
+					<input type="submit" class="btn green-btn login-btn pull-left" value="Register">
+				{{else}}
+					<input type="submit" class="btn green-btn login-btn pull-left" value="Login">
+					<a href="#" class="register-link">register</a>
+				{{/if}}
+			</form>
+		</div>
+	</div>
+</template>

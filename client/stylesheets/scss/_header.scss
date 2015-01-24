@@ -1,0 +1,69 @@
+.application.with-create-game{
+	.header{
+		@include translateY(100px);
+	}
+}
+
+.application.with-account{
+	.header{
+		@include translateY(32px);
+	}
+	.arrow{
+		@include rotate(180deg);
+	}
+}
+
+.account{
+	position: absolute;
+	width: 100%;
+	height: 32px;
+	top: -32px;
+	left: 0;
+	background-color: $green;
+	color: white;
+
+	.nav-links{
+		padding-top: 0;
+	}
+}
+
+.arrow{
+	display: inline-block;
+	@include transform-origin(50%, 55%);
+}
+
+.header{
+	height: 55px;
+	width: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	background-color: white;
+	border-bottom: 5px solid black;
+	color: white;
+	@include transition(all 300ms ease-out);
+}
+
+.nav-links{
+	padding-top: .5rem;
+	float: right;
+	li{
+		float: left;
+		margin-right: 1rem;
+	}
+}
+
+.nav-link{
+	color: $green;
+}
+
+.create-game-link{
+	display: block;
+	float: left;
+	height: 50px;
+}
+
+.home-link{
+	float: right;
+	margin-right: 20px;
+}

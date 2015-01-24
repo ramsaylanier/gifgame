@@ -1,0 +1,15 @@
+<template name="footer">
+	<div class="footer">
+		<div class="wrapper">
+			<nav class="footer-nav">
+				{{#if currentUser}}
+					<a class="footer-link" href="/">Lobby</a>
+					<a class="footer-link" href="/about">About</a>
+				{{else}}
+					<a class="footer-link" href="/about">About</a>
+					<a class="footer-link" href="/login">Login</a>
+				{{/if}}
+			</nav>
+		</div>
+	</div>
+</template>

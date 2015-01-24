@@ -1,0 +1,472 @@
+@import "compass/css3";
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "vars";
+@import "typeplate";
+@import "header";
+@import "errors";
+@import "helpers";
+@import "buttons";
+@import "forms";
+@import "zindex";
+
+*{
+	@include box-sizing(border-box);
+}
+
+* + *{
+	margin-top: 1.5em;
+}
+
+.margins-off > * {
+	margin-top: 0;
+}
+
+body{
+	background-color: black;
+}
+
+a{
+	text-decoration: none;
+}
+
+.about-page{
+	a{
+		color: $green;
+		border-bottom: 1px solid $green;
+	}
+}
+
+.application{
+	@include transition(all 500ms ease-out);
+	@include backface-visibility(hidden);
+
+	&.fade-out{
+		opacity: 0;
+	}
+}
+
+.wrapper{
+	position: relative;
+	width: 90%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alert{
+	padding: 1rem;
+}
+
+.gif-tile{
+	float: left;
+	width: 20%;
+	padding: 5px;
+}
+
+.gif-image{
+	width: 100%;
+}
+
+.game-lobby{
+	margin-top: 2rem;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.game{
+	background-color: white;
+	padding: 1rem;
+	cursor: pointer;
+	margin-bottom: 1rem;
+
+	.game-header{
+		background-color: transparent;
+	}
+
+	&.in-game{
+		background-color: $green;
+		color: white;
+
+		.lobby-game-name{
+			color: white;
+			border-color: white;
+		}
+
+	}
+
+	&.started{
+		cursor: inherit;
+		background-color: $red;
+		color: fade-out(black, .7);
+
+		.lobby-game-name{
+			color: fade-out(black, .7);
+			border-color: fade-out(black, .7);
+		}
+	}
+}
+
+.lobby-game-name{
+	border-bottom: 1px solid black;
+}
+
+.game-view{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	padding-top: 55px;
+}
+
+.game-name{
+	float: left;
+	margin-right: 3rem;
+	line-height: 2.5rem;
+}
+
+.game-header{
+	position: relative;
+	background-color: white;
+	@include legacy-pie-clearfix;
+}
+
+.game-admin{
+	position: absolute;
+	top: -55px;
+	left: 0;
+	width: 50%;
+	padding-top: 4px;
+}
+
+.game-board{
+	position: relative;
+	left: 50%;
+	padding: 8rem 0rem;
+	@include legacy-pie-clearfix;
+
+	@include translateX(-50%);
+}
+
+.game-prompt{
+	position: relative;
+	text-align: center;
+	padding: 1rem;
+	line-height: 2rem;
+	background-color: white;
+	float: left;
+	left: 50%;
+
+	@include border-radius(3px);
+	@include translateX(-50%);
+
+	h3{
+		margin: 0;
+	}
+}
+
+.game-submissions{
+	margin-top: 2rem;
+	width: 100%;
+	float: left;
+}
+
+.game-winners{
+
+}
+
+.asterik{
+	color: $red;
+	position: relative;
+	top: 5px;
+}
+
+.player-list{
+	width: 100%;
+	@include legacy-pie-clearfix;
+}
+
+.player-info{
+	position: relative;
+	height: 100%;
+	padding: .25em;
+	width: 15%;
+	float: left;
+	text-align: center;
+	border-bottom: 5px solid white;
+
+	&.current-czar{
+		border-color: $red;
+		background-color: fade-out($red, .8);
+	}
+
+	&.gold-winner{
+		border-color: $gold;
+		background-color: fade-out($gold, .8);
+	}
+
+	&.silver-winner{
+		border-color: $silver;
+		background-color: fade-out($silver, .8);
+	}
+
+	&.bronze-winner{
+		border-color: $bronze;
+		background-color: fade-out($bronze, .8);
+	}
+}
+
+.player-name{
+	font-size: 1.3rem;
+	font-weight: 700;
+	display: block;
+}
+
+.player-hand{
+	position: relative;
+	width: 100vw;
+	background-color: black;
+	padding: 1rem 0rem;
+}
+
+.player-card{
+	position: relative;
+	cursor: pointer;
+	width: 20%;
+	border: 10px solid black;
+
+	&:after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		background-color: transparent;
+		@include transition(all 300ms ease-out);
+	}
+
+	&.selected{
+		&:after{
+			opacity: .5;
+			background-color: $green;
+		}
+	}
+}
+
+.player-gif{
+	width: 100%;
+	position: relative;
+	@include transition(all 300ms ease-out);
+}
+
+.card-score{
+	position: absolute;
+	width: 1.5rem;
+	height: 1.5rem;
+	text-align: center;
+	line-height: 1rem;
+	top: 10px;
+	right: 10px;
+	font-size: .9rem;
+	background-color: $green;
+	color: white;
+	padding: 5px;
+	@include border-radius(50%);
+}
+
+.submitted-card{
+	position: relative;
+	float: left;
+	width: 20%;
+	cursor: pointer;
+	overflow: hidden;
+	border: 5px solid lighten(black, 10%);
+	&:after{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		bottom: 0;
+		right: 0;
+		opacity: .9;
+		@include transition(all 300ms ease-out);
+		@include transform(rotate(-45deg));
+		@include transform-origin(100%, 0%);
+	}
+}
+
+.gold{
+	&:after{
+		background-color: $gold;
+	}
+}
+
+.silver{
+	&:after{
+		background-color: $silver;
+	}
+}
+
+.bronze{
+	&:after{
+		background-color: $bronze;
+	}
+}
+
+.round-timer{
+	position: absolute;
+	right: -1.1rem;
+	top: 0;
+	background-color: $red;
+	color: white;
+	text-align: center;
+	width: 2.2rem;
+	font-size: 1.5rem;
+}
+
+.landing-page{
+	background-color: black;
+	@include legacy-pie-clearfix;
+}
+
+.hero{
+	position: fixed;
+	width: 100%;
+	height: 50vh;
+	top: 0;
+	left: 0;
+	background-image: url('gifgame5.gif');
+	background-size: cover;
+	background-position: center right;
+	overflow: auto;
+	@include transition(opacity 500ms ease-out 0ms);
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include background-image(radial-gradient(transparent 20%, black 90%));
+	}
+}
+
+.hero-content{
+	position: relative;
+	padding: 2rem 0rem;
+	margin-top: 50vh;
+	width: 100%;
+	min-height: 80vh;
+	background-color: black;
+	@include backface-visibility(hidden);
+}
+
+.home-section{
+	height: 50vh;
+	width: 100%;
+	background-color: black;
+	padding-bottom: 2rem;
+	position: relative;
+	top: 50vh;
+}
+
+.content-section{
+	padding: 2rem 0rem;
+	max-width: 700px;
+	margin: 0 auto;
+	color: darken(white, 30%);
+}
+
+.content-heading{
+	color: white;
+	margin-top: 2rem;
+}
+
+.screencap{
+	margin: 1.5rem 0rem;
+	width: 100%;
+}
+
+.cta-list{
+	@include transition(all 300ms ease-out);
+}
+
+.container{
+	min-height: 100vh;
+	@include legacy-pie-clearfix;
+	&.decision-made{
+		.cta-list{
+			@include translateY(20px);
+			opacity: 0.0;
+		}
+
+		.hero, .home-section{
+			opacity: 0.0;
+		}
+	}
+
+	&.decision-loaded{
+		.hero{
+			background-image: url('gifgame.gif');
+			height: 100vh;
+			opacity: 1.0;
+
+			&.fade-out{
+				opacity: 0.0;
+			}
+		}
+	}
+
+	&.about-loaded{
+		.hero{
+			background-image: url('about.gif');
+			height: 50vh;
+			opacity: 1.0;
+
+			&.fade-out{
+				opacity: 0.0;
+			}
+		}
+	}
+}
+
+.waiting-loader{
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+	background-image: url('waiting3.gif');
+	background-repeat: no-repeat;
+	background-size: 300px;
+	background-position: center center;
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include background-image(radial-gradient(transparent 50px, black 150px));
+	}
+}
+
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 55px;
+	border-top: 5px solid white;
+	padding: .7rem 0rem;
+	background-color: black;
+}
+
+.footer-link{
+	color: $green;
+	margin-right: 10px;
+}

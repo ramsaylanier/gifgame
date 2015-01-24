@@ -1,0 +1,25 @@
+<template name="lobby">
+	{{#if inGame}}
+		<div class="alert green-bg"> 
+			<div class="wrapper">
+				<p class="white">You are currently in <span class="strong">{{inGame}}</span>. Please <a href="/games/{{gameId}}">rejoin</a> the game.</p>
+			</div>
+		</div>
+	{{/if}}
+
+	<div class="game-lobby">
+		<div class="wrapper">
+			<h2 class="white t-a-center">Lobby</h2>
+
+			{{#if games.count}}
+			<ul class="lobby-game-list">
+				{{#each games}}
+					{{> lobbyGameView}}
+				{{/each}}
+			</ul>
+			{{else}}
+				<p class="t-a-center">There are currently no games.</p>
+			{{/if}}
+		</div>
+	</div>
+</template>

@@ -1,0 +1,41 @@
+.white{
+	color: white;
+}
+
+.green-bg{
+	background-color: $green;
+}
+
+.red-bg{
+	background-color: $red;
+}
+
+.gold-bg{
+	background-color: $gold;
+}
+
+.silver-bg{
+	background-color: $silver;
+}
+
+.bronze-bg{
+	background-color: $bronze;
+}
+
+.t-a-center{
+	text-align: center;
+}
+
+.vert-center{
+	@include translateY(-50%);
+	top: 50%;
+	position: relative;
+}
+
+.pull-right{
+	float: right;
+}
+
+.pad-1{
+	padding: 1rem;
+}

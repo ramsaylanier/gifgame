@@ -1,0 +1,10 @@
+<template name="lobbyGameView">
+	<div class="game {{inGame}} {{gameStatus}}">
+		{{#if inGame}}
+			<span class="in-game-message pull-right">You are currently in this game</span>
+		{{/if}}
+		<h3 class="lobby-game-name strong">{{name}}</h3>
+		<span class="game-status">{{gameStatus}}</span>
+		<p class="player-count "> {{players.length}} / 8 players</p>
+	</div>
+</template>

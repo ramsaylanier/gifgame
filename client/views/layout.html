@@ -1,0 +1,10 @@
+<template name="layout">
+  <div class="application fade-out">
+    {{> yield "header"}}
+    <div class="container full-width">
+		{{> errors}}
+		{{> yield}}
+    </div>
+    {{> footer}}
+  </div>
+</template>

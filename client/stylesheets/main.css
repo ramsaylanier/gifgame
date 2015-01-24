@@ -1,0 +1,1398 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Teko:400,600,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+/* line 5, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/*!
+ *
+.||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
+
+	.                                      '||            .
+  .||.  .... ... ... ...    ....  ... ...   ||   ....   .||.    ....
+   ||    '|.  |   ||'  || .|...||  ||'  ||  ||  '' .||   ||   .|...||
+   ||     '|.|    ||    | ||       ||    |  ||  .|' ||   ||   ||
+   '|.'    '|     ||...'   '|...'  ||...'  .||. '|..'|'  '|.'  '|...'
+		.. |      ||               ||
+		 ''      ''''             ''''      A Typographic Starter Kit
+
+  URL ........... http://typeplate.com
+  VERSION ....... 1.1.1
+  Github ........ https://github.com/typeplate/typeplate.github.io
+  AUTHORS ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+  LICENSE ....... Creative Commmons Attribution 3.0
+  LICENSE URL ... http://creativecommons.org/licenses/by/3.0
+
+ .||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||..||.
+ *
+ */
+/* line 38, scss/_typeplate.scss */
+body, button {
+  font-family: "Lato", sans-serif;
+}
+
+/* line 42, scss/_typeplate.scss */
+p {
+  font-size: 1rem;
+}
+/* line 45, scss/_typeplate.scss */
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* line 50, scss/_typeplate.scss */
+a {
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+/* line 54, scss/_typeplate.scss */
+.strong {
+  font-weight: 700;
+}
+
+/* line 58, scss/_typeplate.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
+  unicode-range: U+0026;
+}
+@font-face {
+  font-family: "Ampersand";
+  src: local("Georgia");
+  unicode-range: U+270C;
+}
+/* line 416, scss/_typeplate.scss */
+body {
+  word-wrap: break-word;
+}
+
+/* line 420, scss/_typeplate.scss */
+pre code {
+  word-wrap: normal;
+}
+
+/**
+ * Dropcap Sass @include
+ * Use the following Sass @include with any selector you feel necessary.
+ *
+	@include dropcap($dropcap-float-position, $dropcap-font-size, $dropcap-font-family, $dropcap-txt-indent, $dropcap-margin, $dropcap-padding, $dropcap-color, $dropcap-line-height, $dropcap-bg);
+ *
+ * Extend this object into your custom stylesheet. Let the variables do the work.
+ *
+ */
+/* line 545, scss/_typeplate.scss */
+html {
+  font: normal 112.5%/1.5 serif;
+}
+
+/* line 553, scss/_typeplate.scss */
+body {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+  color: #444;
+}
+
+/* line 564, scss/_typeplate.scss */
+small {
+  font-size: 65%;
+}
+
+/* line 587, scss/_typeplate.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  line-height: 1;
+  margin-top: 0;
+}
+
+/* line 602, scss/_typeplate.scss */
+.tera {
+  font-size: 117px;
+  font-size: 6.5rem;
+  margin-bottom: 0.23077rem;
+}
+
+/* line 602, scss/_typeplate.scss */
+.giga {
+  font-size: 90px;
+  font-size: 5rem;
+  margin-bottom: 0.3rem;
+}
+
+/* line 602, scss/_typeplate.scss */
+.mega {
+  font-size: 72px;
+  font-size: 4rem;
+  margin-bottom: 0.375rem;
+}
+
+/* line 602, scss/_typeplate.scss */
+.alpha, h1 {
+  font-size: 60px;
+  font-size: 3.33333rem;
+  margin-bottom: 0.45rem;
+}
+
+/* line 602, scss/_typeplate.scss */
+.beta, h2 {
+  font-size: 48px;
+  font-size: 2.66667rem;
+  margin-bottom: 0.5625rem;
+}
+
+/* line 602, scss/_typeplate.scss */
+.gamma, h3 {
+  font-size: 36px;
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* line 602, scss/_typeplate.scss */
+.delta, h4 {
+  font-size: 24px;
+  font-size: 1.33333rem;
+  margin-bottom: 1.125rem;
+}
+
+/* line 602, scss/_typeplate.scss */
+.epsilon, h5 {
+  font-size: 21px;
+  font-size: 1.16667rem;
+  margin-bottom: 1.28571rem;
+}
+
+/* line 602, scss/_typeplate.scss */
+.zeta, h6 {
+  font-size: 18px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* line 642, scss/_typeplate.scss */
+p {
+  margin: auto auto 1.5rem;
+}
+
+/* line 656, scss/_typeplate.scss */
+abbr,
+acronym,
+blockquote,
+code,
+dir,
+kbd,
+listing,
+plaintext,
+q,
+samp,
+tt,
+var,
+xmp {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -o-hyphens: none;
+  hyphens: none;
+}
+
+/* line 676, scss/_typeplate.scss */
+pre code {
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+/* line 681, scss/_typeplate.scss */
+pre {
+  white-space: pre;
+}
+
+/* line 685, scss/_typeplate.scss */
+code {
+  white-space: pre;
+  font-family: monospace;
+}
+
+/**
+ * Abbreviations Markup
+ *
+	<abbr title="hyper text markup language">HMTL</abbr>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 701, scss/_typeplate.scss */
+abbr {
+  font-variant: small-caps;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: gray;
+}
+/* line 703, scss/_typeplate.scss */
+abbr[title]:hover {
+  cursor: help;
+}
+
+/* line 712, scss/_typeplate.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  font-family: "Teko", sans-serif;
+  font-weight: 600;
+}
+
+/* line 729, scss/_typeplate.scss */
+p + .drop-cap {
+  text-indent: 0;
+  margin-top: 0;
+}
+
+/* line 447, scss/_typeplate.scss */
+.drop-cap:first-letter {
+  float: left;
+  margin: inherit;
+  padding: inherit;
+  font-size: 4em;
+  font-family: inherit;
+  line-height: 1;
+  text-indent: 0;
+  background: transparent;
+  color: inherit;
+}
+
+/**
+ * Lining Definition Style Markup
+ *
+	<dl class="lining">
+		<dt><b></b></dt>
+		<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 485, scss/_typeplate.scss */
+.lining dt,
+.lining dd {
+  display: inline;
+  margin: 0;
+}
+/* line 493, scss/_typeplate.scss */
+.lining dt + dt:before,
+.lining dd + dt:before {
+  content: "\A";
+  white-space: pre;
+}
+/* line 501, scss/_typeplate.scss */
+.lining dd + dd:before {
+  content: ", ";
+}
+/* line 505, scss/_typeplate.scss */
+.lining dd:before {
+  content: ": ";
+  margin-left: -0.2rem;
+}
+
+/**
+ * Dictionary Definition Style Markup
+ *
+	<dl class="dictionary-style">
+		<dt><b></b></dt>
+			<dd></dd>
+	</dl>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 513, scss/_typeplate.scss */
+.dictionary-style dt {
+  display: inline;
+  counter-reset: definitions;
+}
+/* line 517, scss/_typeplate.scss */
+.dictionary-style dt + dt:before {
+  content: ", ";
+  margin-left: -0.2rem;
+}
+/* line 523, scss/_typeplate.scss */
+.dictionary-style dd {
+  display: block;
+  counter-increment: definitions;
+}
+/* line 526, scss/_typeplate.scss */
+.dictionary-style dd:before {
+  content: counter(definitions,decimal) ". ";
+}
+
+/**
+ * Blockquote Markup
+ *
+		<figure>
+			<blockquote cite="">
+				<p></p>
+			</blockquote>
+			<figcaption>
+				<cite>
+					<small><a href=""></a></small>
+				</cite>
+			</figcaption>
+		</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Pull Quotes Markup
+ *
+	<aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	</aside>
+ *
+ * Extend this object into your custom stylesheet.
+ *
+ */
+/* line 813, scss/_typeplate.scss */
+.pull-quote {
+  position: relative;
+  padding: 1em;
+}
+/* line 387, scss/_typeplate.scss */
+.pull-quote:before, .pull-quote:after {
+  height: 1em;
+  opacity: 0.5;
+  position: absolute;
+  font-size: 4em;
+  color: #dc976e;
+}
+/* line 395, scss/_typeplate.scss */
+.pull-quote:before {
+  content: '“';
+  top: 0;
+  left: 0;
+}
+/* line 400, scss/_typeplate.scss */
+.pull-quote:after {
+  content: '”';
+  bottom: 0;
+  right: 0;
+}
+
+/**
+ * Figures Markup
+ *
+	<figure>
+		<figcaption>
+			<strong>Fig. 4.2 | </strong>Type Anatomy, an excerpt from Mark Boulton's book<cite title="http://designingfortheweb.co.uk/book/part3/part3_chapter11.php">"Designing for the Web"</cite>
+		</figcaption>
+	</figure>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/**
+ * Footnote Markup : Replace 'X' with your unique number for each footnote
+ *
+	<article>
+		<p><sup><a href="#fn-itemX" id="fn-returnX"></a></sup></p>
+		<footer>
+			<ol class="foot-notes">
+				<li id="fn-itemX"><a href="#fn-returnX">↩</a></li>
+			</ol>
+		</footer>
+	</article>
+ *
+ * Extend this object into your markup.
+ *
+ */
+/* line 2, scss/_header.scss */
+.application.with-create-game .header {
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  transform: translateY(100px);
+}
+
+/* line 8, scss/_header.scss */
+.application.with-account .header {
+  -moz-transform: translateY(32px);
+  -ms-transform: translateY(32px);
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+}
+/* line 11, scss/_header.scss */
+.application.with-account .arrow {
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 16, scss/_header.scss */
+.account {
+  position: absolute;
+  width: 100%;
+  height: 32px;
+  top: -32px;
+  left: 0;
+  background-color: #6CC593;
+  color: white;
+}
+/* line 25, scss/_header.scss */
+.account .nav-links {
+  padding-top: 0;
+}
+
+/* line 30, scss/_header.scss */
+.arrow {
+  display: inline-block;
+  -moz-transform-origin: 50% 55%;
+  -ms-transform-origin: 50% 55%;
+  -webkit-transform-origin: 50% 55%;
+  transform-origin: 50% 55%;
+}
+
+/* line 35, scss/_header.scss */
+.header {
+  height: 55px;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-bottom: 5px solid black;
+  color: white;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+/* line 47, scss/_header.scss */
+.nav-links {
+  padding-top: .5rem;
+  float: right;
+}
+/* line 50, scss/_header.scss */
+.nav-links li {
+  float: left;
+  margin-right: 1rem;
+}
+
+/* line 56, scss/_header.scss */
+.nav-link {
+  color: #6CC593;
+}
+
+/* line 60, scss/_header.scss */
+.create-game-link {
+  display: block;
+  float: left;
+  height: 50px;
+}
+
+/* line 66, scss/_header.scss */
+.home-link {
+  float: right;
+  margin-right: 20px;
+}
+
+/* line 1, scss/_errors.scss */
+.errors {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  bottom: 55px;
+  left: 0;
+  color: white;
+}
+/* line 9, scss/_errors.scss */
+.errors .error {
+  background-color: #C63838;
+}
+/* line 13, scss/_errors.scss */
+.errors .success {
+  background-color: #6CC593;
+}
+
+/* line 1, scss/_helpers.scss */
+.white {
+  color: white;
+}
+
+/* line 5, scss/_helpers.scss */
+.green-bg {
+  background-color: #6CC593;
+}
+
+/* line 9, scss/_helpers.scss */
+.red-bg {
+  background-color: #C63838;
+}
+
+/* line 13, scss/_helpers.scss */
+.gold-bg {
+  background-color: #f3c715;
+}
+
+/* line 17, scss/_helpers.scss */
+.silver-bg {
+  background-color: #b1b1b1;
+}
+
+/* line 21, scss/_helpers.scss */
+.bronze-bg {
+  background-color: #a96906;
+}
+
+/* line 25, scss/_helpers.scss */
+.t-a-center {
+  text-align: center;
+}
+
+/* line 29, scss/_helpers.scss */
+.vert-center {
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+}
+
+/* line 35, scss/_helpers.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 39, scss/_helpers.scss */
+.pad-1 {
+  padding: 1rem;
+}
+
+/* line 1, scss/_buttons.scss */
+.btn {
+  border: 0px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* line 9, scss/_buttons.scss */
+.btn.red-btn {
+  color: white;
+  background-color: #C63838;
+}
+/* line 14, scss/_buttons.scss */
+.btn.green-btn {
+  color: white;
+  background-color: #6CC593;
+}
+/* line 19, scss/_buttons.scss */
+.btn.transparent-btn {
+  background-color: transparent;
+  font-size: 1rem;
+}
+/* line 24, scss/_buttons.scss */
+.btn.yes-btn {
+  background-color: #6CC593;
+  color: white;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+}
+/* line 31, scss/_buttons.scss */
+.btn.no-btn {
+  margin: 2rem 0rem;
+  background-color: #C63838;
+  color: white;
+  font-size: 1.3rem;
+}
+/* line 38, scss/_buttons.scss */
+.btn.create-game-btn {
+  background-color: white;
+  color: #6CC593;
+  font-size: 1rem;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+/* line 45, scss/_buttons.scss */
+.btn.start-game-btn {
+  font-size: 1.5rem;
+}
+
+/* line 1, scss/_forms.scss */
+.login-form-wrapper {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate3d(-50%, -50%, 1em);
+  -webkit-transform: translate3d(-50%, -50%, 1em);
+  transform: translate3d(-50%, -50%, 1em);
+  -moz-transition: all 300ms ease-out 300ms;
+  -o-transition: all 300ms ease-out 300ms;
+  -webkit-transition: all 300ms ease-out;
+  -webkit-transition-delay: 300ms;
+  transition: all 300ms ease-out 300ms;
+}
+/* line 10, scss/_forms.scss */
+.login-form-wrapper.off-page {
+  -moz-transform: translate3d(-50%, -30%, 1em);
+  -webkit-transform: translate3d(-50%, -30%, 1em);
+  transform: translate3d(-50%, -30%, 1em);
+  opacity: 0.0;
+}
+
+/* line 16, scss/_forms.scss */
+.form-control {
+  margin-top: 1rem;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+/* line 20, scss/_forms.scss */
+.form-control.inline {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+/* line 26, scss/_forms.scss */
+.form-control.off-page {
+  opacity: 0.0;
+}
+
+/* line 31, scss/_forms.scss */
+.field {
+  padding: .5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: white;
+  margin-top: 0rem;
+}
+/* line 38, scss/_forms.scss */
+.field.dark-field {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+/* line 61, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.field.dark-field:-moz-placeholder {
+  color: white;
+}
+/* line 64, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.field.dark-field::-moz-placeholder {
+  color: white;
+}
+/* line 67, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.field.dark-field:-ms-input-placeholder {
+  color: white;
+}
+/* line 56, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/css3/_user-interface.scss */
+.field.dark-field::-webkit-input-placeholder {
+  color: white;
+}
+
+/* line 47, scss/_forms.scss */
+.new-game-form {
+  position: absolute;
+  background-color: #6CC593;
+  width: 100%;
+  height: 100px;
+  top: -100px;
+}
+
+/* line 57, scss/_forms.scss */
+.register-link {
+  color: #C63838;
+}
+
+/* line 1, scss/_zindex.scss */
+.errors {
+  z-index: 1000;
+}
+
+/* line 5, scss/_zindex.scss */
+.footer {
+  z-index: 400;
+}
+
+/* line 9, scss/_zindex.scss */
+.login-form-wrapper {
+  z-index: 300;
+}
+
+/* line 13, scss/_zindex.scss */
+.home-hero, .game-header {
+  z-index: 200;
+}
+
+/* line 17, scss/_zindex.scss */
+.header {
+  z-index: 100;
+}
+
+/* line 21, scss/_zindex.scss */
+.home-section {
+  z-index: 100;
+}
+
+/* line 13, scss/main.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 17, scss/main.scss */
+* + * {
+  margin-top: 1.5em;
+}
+
+/* line 21, scss/main.scss */
+.margins-off > * {
+  margin-top: 0;
+}
+
+/* line 25, scss/main.scss */
+body {
+  background-color: black;
+}
+
+/* line 29, scss/main.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 34, scss/main.scss */
+.about-page a {
+  color: #6CC593;
+  border-bottom: 1px solid #6CC593;
+}
+
+/* line 40, scss/main.scss */
+.application {
+  -moz-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  -webkit-transition: all 500ms ease-out;
+  transition: all 500ms ease-out;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* line 44, scss/main.scss */
+.application.fade-out {
+  opacity: 0;
+}
+
+/* line 49, scss/main.scss */
+.wrapper {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 57, scss/main.scss */
+.alert {
+  padding: 1rem;
+}
+
+/* line 61, scss/main.scss */
+.gif-tile {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+
+/* line 67, scss/main.scss */
+.gif-image {
+  width: 100%;
+}
+
+/* line 71, scss/main.scss */
+.game-lobby {
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 78, scss/main.scss */
+.game {
+  background-color: white;
+  padding: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+/* line 84, scss/main.scss */
+.game .game-header {
+  background-color: transparent;
+}
+/* line 88, scss/main.scss */
+.game.in-game {
+  background-color: #6CC593;
+  color: white;
+}
+/* line 92, scss/main.scss */
+.game.in-game .lobby-game-name {
+  color: white;
+  border-color: white;
+}
+/* line 99, scss/main.scss */
+.game.started {
+  cursor: inherit;
+  background-color: #C63838;
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 104, scss/main.scss */
+.game.started .lobby-game-name {
+  color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* line 111, scss/main.scss */
+.lobby-game-name {
+  border-bottom: 1px solid black;
+}
+
+/* line 115, scss/main.scss */
+.game-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding-top: 55px;
+}
+
+/* line 123, scss/main.scss */
+.game-name {
+  float: left;
+  margin-right: 3rem;
+  line-height: 2.5rem;
+}
+
+/* line 129, scss/main.scss */
+.game-header {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+}
+/* line 22, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.game-header:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 135, scss/main.scss */
+.game-admin {
+  position: absolute;
+  top: -55px;
+  left: 0;
+  width: 50%;
+  padding-top: 4px;
+}
+
+/* line 143, scss/main.scss */
+.game-board {
+  position: relative;
+  left: 50%;
+  padding: 8rem 0rem;
+  *zoom: 1;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* line 22, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.game-board:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 152, scss/main.scss */
+.game-prompt {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  line-height: 2rem;
+  background-color: white;
+  float: left;
+  left: 50%;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+/* line 164, scss/main.scss */
+.game-prompt h3 {
+  margin: 0;
+}
+
+/* line 169, scss/main.scss */
+.game-submissions {
+  margin-top: 2rem;
+  width: 100%;
+  float: left;
+}
+
+/* line 179, scss/main.scss */
+.asterik {
+  color: #C63838;
+  position: relative;
+  top: 5px;
+}
+
+/* line 185, scss/main.scss */
+.player-list {
+  width: 100%;
+  *zoom: 1;
+}
+/* line 22, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.player-list:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 190, scss/main.scss */
+.player-info {
+  position: relative;
+  height: 100%;
+  padding: .25em;
+  width: 15%;
+  float: left;
+  text-align: center;
+  border-bottom: 5px solid white;
+}
+/* line 199, scss/main.scss */
+.player-info.current-czar {
+  border-color: #C63838;
+  background-color: rgba(198, 56, 56, 0.2);
+}
+/* line 204, scss/main.scss */
+.player-info.gold-winner {
+  border-color: #f3c715;
+  background-color: rgba(243, 199, 21, 0.2);
+}
+/* line 209, scss/main.scss */
+.player-info.silver-winner {
+  border-color: #b1b1b1;
+  background-color: rgba(177, 177, 177, 0.2);
+}
+/* line 214, scss/main.scss */
+.player-info.bronze-winner {
+  border-color: #a96906;
+  background-color: rgba(169, 105, 6, 0.2);
+}
+
+/* line 220, scss/main.scss */
+.player-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  display: block;
+}
+
+/* line 226, scss/main.scss */
+.player-hand {
+  position: relative;
+  width: 100vw;
+  background-color: black;
+  padding: 1rem 0rem;
+}
+
+/* line 233, scss/main.scss */
+.player-card {
+  position: relative;
+  cursor: pointer;
+  width: 20%;
+  border: 10px solid black;
+}
+/* line 239, scss/main.scss */
+.player-card:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: transparent;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+/* line 252, scss/main.scss */
+.player-card.selected:after {
+  opacity: .5;
+  background-color: #6CC593;
+}
+
+/* line 259, scss/main.scss */
+.player-gif {
+  width: 100%;
+  position: relative;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+/* line 265, scss/main.scss */
+.card-score {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1rem;
+  top: 10px;
+  right: 10px;
+  font-size: .9rem;
+  background-color: #6CC593;
+  color: white;
+  padding: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+/* line 280, scss/main.scss */
+.submitted-card {
+  position: relative;
+  float: left;
+  width: 20%;
+  cursor: pointer;
+  overflow: hidden;
+  border: 5px solid #1a1a1a;
+}
+/* line 287, scss/main.scss */
+.submitted-card:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+  opacity: .9;
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -moz-transform-origin: 100% 0%;
+  -ms-transform-origin: 100% 0%;
+  -webkit-transform-origin: 100% 0%;
+  transform-origin: 100% 0%;
+}
+
+/* line 302, scss/main.scss */
+.gold:after {
+  background-color: #f3c715;
+}
+
+/* line 308, scss/main.scss */
+.silver:after {
+  background-color: #b1b1b1;
+}
+
+/* line 314, scss/main.scss */
+.bronze:after {
+  background-color: #a96906;
+}
+
+/* line 319, scss/main.scss */
+.round-timer {
+  position: absolute;
+  right: -1.1rem;
+  top: 0;
+  background-color: #C63838;
+  color: white;
+  text-align: center;
+  width: 2.2rem;
+  font-size: 1.5rem;
+}
+
+/* line 330, scss/main.scss */
+.landing-page {
+  background-color: black;
+  *zoom: 1;
+}
+/* line 22, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.landing-page:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* line 335, scss/main.scss */
+.hero {
+  position: fixed;
+  width: 100%;
+  height: 50vh;
+  top: 0;
+  left: 0;
+  background-image: url("gifgame5.gif");
+  background-size: cover;
+  background-position: center right;
+  overflow: auto;
+  -moz-transition: opacity 500ms ease-out 0ms;
+  -o-transition: opacity 500ms ease-out 0ms;
+  -webkit-transition: opacity 500ms ease-out;
+  -webkit-transition-delay: 0ms;
+  transition: opacity 500ms ease-out 0ms;
+}
+/* line 347, scss/main.scss */
+.hero:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iOTAlIj48c3RvcCBvZmZzZXQ9IjIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjkwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(rgba(0, 0, 0, 0) 20%, #000000 90%);
+  background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0) 20%, #000000 90%);
+  background-image: radial-gradient(rgba(0, 0, 0, 0) 20%, #000000 90%);
+}
+
+/* line 358, scss/main.scss */
+.hero-content {
+  position: relative;
+  padding: 2rem 0rem;
+  margin-top: 50vh;
+  width: 100%;
+  min-height: 80vh;
+  background-color: black;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 368, scss/main.scss */
+.home-section {
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  padding-bottom: 2rem;
+  position: relative;
+  top: 50vh;
+}
+
+/* line 377, scss/main.scss */
+.content-section {
+  padding: 2rem 0rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #b3b3b3;
+}
+
+/* line 384, scss/main.scss */
+.content-heading {
+  color: white;
+  margin-top: 2rem;
+}
+
+/* line 389, scss/main.scss */
+.screencap {
+  margin: 1.5rem 0rem;
+  width: 100%;
+}
+
+/* line 394, scss/main.scss */
+.cta-list {
+  -moz-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  -webkit-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+/* line 398, scss/main.scss */
+.container {
+  min-height: 100vh;
+  *zoom: 1;
+}
+/* line 22, ../../../../.rvm/gems/ruby-2.1.2/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 402, scss/main.scss */
+.container.decision-made .cta-list {
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+  opacity: 0.0;
+}
+/* line 407, scss/main.scss */
+.container.decision-made .hero, .container.decision-made .home-section {
+  opacity: 0.0;
+}
+/* line 413, scss/main.scss */
+.container.decision-loaded .hero {
+  background-image: url("gifgame.gif");
+  height: 100vh;
+  opacity: 1.0;
+}
+/* line 418, scss/main.scss */
+.container.decision-loaded .hero.fade-out {
+  opacity: 0.0;
+}
+/* line 425, scss/main.scss */
+.container.about-loaded .hero {
+  background-image: url("about.gif");
+  height: 50vh;
+  opacity: 1.0;
+}
+/* line 430, scss/main.scss */
+.container.about-loaded .hero.fade-out {
+  opacity: 0.0;
+}
+
+/* line 437, scss/main.scss */
+.waiting-loader {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  background-image: url("waiting3.gif");
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: center center;
+}
+/* line 447, scss/main.scss */
+.waiting-loader:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iMTUwJSI+PHN0b3Agb2Zmc2V0PSIzMy4zMzMzMyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(rgba(0, 0, 0, 0) 50px, #000000 150px);
+  background-image: -webkit-radial-gradient(rgba(0, 0, 0, 0) 50px, #000000 150px);
+  background-image: radial-gradient(rgba(0, 0, 0, 0) 50px, #000000 150px);
+}
+
+/* line 458, scss/main.scss */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  border-top: 5px solid white;
+  padding: .7rem 0rem;
+  background-color: black;
+}
+
+/* line 469, scss/main.scss */
+.footer-link {
+  color: #6CC593;
+  margin-right: 10px;
+}

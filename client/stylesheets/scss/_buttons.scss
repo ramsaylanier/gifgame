@@ -1,0 +1,48 @@
+.btn{
+	border: 0px;
+	padding: 10px 15px;
+	cursor: pointer;
+	font-size: 1rem;
+	@include backface-visibility(hidden);
+
+
+	&.red-btn{
+		color: white;
+		background-color: $red;
+	}
+
+	&.green-btn{
+		color: white;
+		background-color: $green;
+	}
+
+	&.transparent-btn{
+		background-color: transparent;
+		font-size: 1rem;
+	}
+
+	&.yes-btn{
+		background-color: $green;
+		color: white;
+		font-size: 2.5rem;
+		padding: 1.5rem;
+	}
+
+	&.no-btn{
+		margin: 2rem 0rem;
+		background-color: $red;
+		color: white;
+		font-size: 1.3rem;
+	}
+
+	&.create-game-btn{
+		background-color: white;
+		color: $green;
+		font-size: 1rem;
+		@include transition(all 300ms ease-out);
+	}
+
+	&.start-game-btn{
+		font-size: 1.5rem;
+	}
+}
