@@ -20,3 +20,7 @@ Meteor.publish('playersInGame', function(gameId){
 Meteor.publish('playerHands', function(gameId){
 	return Hands.find({playerId: this.userId, gameId: gameId});
 });
+
+Meteor.publish('chatMessages', function(gameId){
+	return Chats.find({gameId: gameId});
+})

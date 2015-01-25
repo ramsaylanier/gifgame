@@ -1,11 +1,11 @@
 <template name="gameView">
 	<div class="game-view">
 		<header class="game-header clearfix">
-			<div class="wrapper">
-				<div class="game-admin margins-off">
+			<div class="game-admin margins-off">
+				<div class="wrapper margins-off">
 					<h3 class="game-name">{{name}}</h3>
 					{{#if ended}}
-						<p class="white">This Game Has Ended</p>
+
 					{{else}}
 						{{#if creator}}
 							<button class="btn red-btn end-game-btn">End Game</button>			
@@ -14,8 +14,10 @@
 						{{/if}}
 					{{/if}}
 				</div>
+			</div>
 
-				<div class="player-list">
+			<div class="player-list">
+				<div class="wrapper">
 					{{#each players}}
 						<div class="player-info {{#if cardCzar}}current-czar{{/if}} {{#if winner ..}}{{winner ..}}-winner{{/if}} margins-off">
 
@@ -35,7 +37,7 @@
 		</header>
 
 
-		<div class="czar-notificaton pull-left">
+		<section class="czar-notification pull-left">
 			{{#if ended}}
 				<h3 class="green-bg white t-a-center pad-1">This game has ended.</h3>
 			{{else}}
@@ -59,20 +61,14 @@
 					{{/if}}
 				{{/if}}
 			{{/if}}
-		</div>
+		</section>
 
 		<section class="game-board t-a-center">
 			{{#if ended}}
 				<h3>This game has ended.</h3>
 			{{else}}
 				{{#if started}}				
-					<div class="game-prompt">
-						<h3>{{gamePrompt}}</h3>
-					</div>
-
-					{{#if roundOver}}
-						{{> playerSubmissions}}
-					{{/if}}
+					<h3 class="game-prompt">{{gamePrompt}}</h3>
 				{{else}}
 					{{#if startable}}
 						{{#if cardCzar}}
@@ -87,6 +83,10 @@
 			{{/if}}
 		</section>
 
+		{{#if roundOver}}
+			{{> playerSubmissions}}
+		{{/if}}
+
 		{{#if cardCzar}}
 			
 		{{else}}
@@ -98,6 +98,10 @@
 			</section>
 			{{/if}}
 		{{/if}}
+	</div>
+
+	<div class="chatroom">
+		{{> chatroom}}
 	</div>
 </template>
 

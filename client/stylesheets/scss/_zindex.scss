@@ -1,8 +1,12 @@
-.errors{
-	z-index: 1000;
+.footer{
+	z-index: 600;
 }
 
-.footer{
+.chatroom{
+	z-index: 500;
+}
+
+.errors{
 	z-index: 400;
 }
 
@@ -10,14 +14,10 @@
 	z-index: 300;
 }
 
-.home-hero, .game-header{
+.home-hero, .game-header, .game-prompt{
 	z-index: 200;
 }
 
-.header{
-	z-index: 100;
-}
-
-.home-section{
+.home-section, .player-hand{
 	z-index: 100;
 }

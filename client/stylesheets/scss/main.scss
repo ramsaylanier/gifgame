@@ -3,11 +3,12 @@
 @import "compass/utilities/general/clearfix";
 @import "vars";
 @import "typeplate";
-@import "header";
+@import "footer";
 @import "errors";
 @import "helpers";
 @import "buttons";
 @import "forms";
+@import "chatroom";
 @import "zindex";
 
 *{
@@ -47,6 +48,7 @@ a{
 }
 
 .wrapper{
+	@include legacy-pie-clearfix;
 	position: relative;
 	width: 90%;
 	height: 100%;
@@ -113,16 +115,15 @@ a{
 }
 
 .game-view{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	padding-top: 55px;
+	width: 60vw;
+	position: relative;
 }
 
 .game-name{
+	color: white;
 	float: left;
 	margin-right: 3rem;
+	margin-bottom: 0;
 	line-height: 2.5rem;
 }
 
@@ -132,34 +133,43 @@ a{
 	@include legacy-pie-clearfix;
 }
 
+.czar-notification{
+	margin-bottom: 4rem;
+}
+
 .game-admin{
-	position: absolute;
-	top: -55px;
+	position: relative;
+	background-color: black;
+
 	left: 0;
-	width: 50%;
+	width: 100%;
 	padding-top: 4px;
 }
 
 .game-board{
 	position: relative;
-	left: 50%;
-	padding: 8rem 0rem;
+	padding-bottom: 6rem;
 	@include legacy-pie-clearfix;
-
-	@include translateX(-50%);
 }
 
 .game-prompt{
-	position: relative;
+	position: absolute;
 	text-align: center;
 	padding: 1rem;
 	line-height: 2rem;
 	background-color: white;
-	float: left;
-	left: 50%;
-
+	width: 50vw;
+	left: 5vw;
+	top: 50%;
+	margin: 0;
+	@include translateY(-50%);
 	@include border-radius(3px);
-	@include translateX(-50%);
+
+	&.sticky{
+		position: fixed;
+		top: 0;
+		@include translateY(0%);
+	}
 
 	h3{
 		margin: 0;
@@ -184,6 +194,7 @@ a{
 
 .player-list{
 	width: 100%;
+	background-color: white;
 	@include legacy-pie-clearfix;
 }
 
@@ -225,15 +236,16 @@ a{
 
 .player-hand{
 	position: relative;
-	width: 100vw;
+	width: 100%;
 	background-color: black;
-	padding: 1rem 0rem;
+	margin-top: 4rem;
+	float: left;
 }
 
 .player-card{
 	position: relative;
 	cursor: pointer;
-	width: 20%;
+	width: 50%;
 	border: 10px solid black;
 
 	&:after{
@@ -280,10 +292,10 @@ a{
 .submitted-card{
 	position: relative;
 	float: left;
-	width: 20%;
+	width: 33.33%;
 	cursor: pointer;
 	overflow: hidden;
-	border: 5px solid lighten(black, 10%);
+	border: 5px solid black;
 	&:after{
 		content: '';
 		position: absolute;
@@ -453,20 +465,4 @@ a{
 		height: 100%;
 		@include background-image(radial-gradient(transparent 50px, black 150px));
 	}
-}
-
-.footer{
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 55px;
-	border-top: 5px solid white;
-	padding: .7rem 0rem;
-	background-color: black;
-}
-
-.footer-link{
-	color: $green;
-	margin-right: 10px;
 }

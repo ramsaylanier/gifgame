@@ -3,14 +3,24 @@
 		<div class="wrapper">
 			<nav class="footer-nav">
 				{{#if currentUser}}
-					<a class="footer-link" href="/">Lobby</a>
+					{{#if notInGame}}
+					<a class="btn green-btn create-game-link" href="#">Create Game</a>
+					{{/if}}
+					<a class="footer-link" href="/lobby">Lobby</a>
 					<a class="footer-link" href="/about">About</a>
+
 				{{else}}
 					<a class="footer-link" href="/">Home</a>
 					<a class="footer-link" href="/about">About</a>
 					<a class="footer-link" href="/login">Login</a>
 				{{/if}}
 			</nav>
+
+			{{#if currentUser}}
+			<nav class="app-nav">
+				<a class="account-link nav-link" href="#">{{currentUser.username}} <span class="arrow">&#9652;</span></a>
+			</nav>
+			{{/if}}
 		</div>
 	</div>
 </template>

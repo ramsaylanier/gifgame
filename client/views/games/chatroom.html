@@ -1,0 +1,16 @@
+<template name="chatroom">
+	<div class="chat-feed">
+	{{#each chats}}
+		{{> chatMessage}}
+	{{/each}}
+	</div>
+
+	<form name="chat-message-form" class="chat-message-form">
+		<input type="text" name="chat-message-field" class="field chat-field">
+		<input type="submit" class="submit-chat-btn btn green-btn" value="Send">
+	</form>
+</template>
+
+<template name="chatMessage">
+	<p class="chat-message"><span class="chat-username {{#if userNameMatch}}green{{/if}}">{{username}}:</span> {{text}}</p>
+</template>

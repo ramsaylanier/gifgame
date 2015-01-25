@@ -2,6 +2,21 @@ Template.gameView.rendered = function(){
 	$('.application').removeClass('fade-out');
 
 	var self = this;
+	var prompt = $('.game-prompt');
+
+	if (prompt.length){
+		var promptOffset = prompt.offset().top;
+			$(window).on('scroll', function(){
+			var pos = $(this).scrollTop();
+			
+			if (pos > promptOffset){
+				prompt.addClass('sticky');
+			} else if (pos < promptOffset && prompt.hasClass('sticky')) {
+				prompt.removeClass('sticky');
+			}
+
+		})
+	}
 }
 
 Template.gameView.helpers({
