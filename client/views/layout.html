@@ -1,9 +1,37 @@
+<head>
+	<title>Gif Game</title>
+
+	<meta property="og:title" content="Gif Game">
+	<meta property="og:site_name" content="Gif Game">
+	<meta property="og:url" content="http://gifgame.meteor.com">
+	<meta property="og:description" content="Imagine Cards Against Humanity but with animated gifs, and a few twists. ">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://gifgame.meteor.com/gifgame5.gif" />
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="verybadhello">
+	<meta name="twitter:title" content="Gif Game">
+	<meta name="twitter:description" content="Imagine Cards Against Humanity but with animated gifs, and a few twists. ">
+	<meta name="twitter:image:src" content="http://gifgame.meteor.com/gifgame5.gif">
+</head>
+
 <template name="layout">
-  <div class="application fade-out">
-    <div class="container full-width">
+
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NWDTTX"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-NWDTTX');</script>
+	<!-- End Google Tag Manager -->
+
+	<div class="application fade-out">
+	<div class="container full-width">
 		{{> errors}}
 		{{> yield}}
-    </div>
-    {{> footer}}
-  </div>
+	</div>
+	{{> footer}}
+	</div>
 </template>
